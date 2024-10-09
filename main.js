@@ -11,7 +11,6 @@ const input = document.querySelector("#main__input");
 const expression = document.querySelector("#calc__expression");
 
 //add events for input buttons
-let body;
 const numbersBtns = numbersContainer.children;
 for (let i = 0; i < numbersBtns.length; i++) {
   numbersBtns[i].addEventListener("click", () => handleInput(i));
