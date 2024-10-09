@@ -1,0 +1,132 @@
+:root {
+  --first-back: rgb(233, 233, 234);
+  --second-back: rgb(244, 239, 222);
+  --third-back: rgb(202, 225, 190);
+  --first-text: rgb(105, 105, 105);
+  --dark-text: rgb(20, 20, 20);
+  --light-text: rgb(140, 140, 140);
+  --transparent: rgba(255, 255, 255, 0);
+  --semi-transparent: rgba(255, 255, 255, 0.329);
+  --hover-back: rgb(250, 250, 195);
+  --active-back: rgb(250, 227, 193);
+  background-color: rgb(17, 35, 48);  
+}
+
+.calc__container {
+    max-width: 60%;
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--semi-transparent);
+    border-radius: 1rem;
+}
+
+.buttons1__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.buttons2__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.numbers__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+button {
+    height: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: dimgrey;
+    background-color: rgb(235, 235, 235);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#main__input {
+    padding: 0.5rem;
+    font-size: 1.75rem;
+    border: 2px solid lightgrey;
+    border-radius: 0.5rem;
+    background-color: rgb(244, 239, 222);
+}
+
+#calc__expression {
+    border: none;
+    color: dimgrey;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 1.5rem;
+}
+
+.expr__container {
+    overflow: hidden;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    height: max-content;
+    background-color: rgb(210, 222, 226);    
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+}
+
+.history {
+    overflow: hidden;
+    max-height: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.history.active {
+    max-height: 300px;
+}
+
+.history li {
+    font-family: sans-serif;
+    color: dimgrey;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+button.expr__btn {
+    height: 1.5rem;
+    border: 2px solid var(--light-text);
+    color: var(--light-text);
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+    cursor: pointer;   
+}
+
+button.expr__btn:hover {
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid var(--dark-text);
+    color: var(--dark-text);
+}
+
+#calc__expression:focus, #main__input:focus  {
+    outline: none
+}
+
+button:focus {
+    outline: none
+}
+
+button:hover  {
+    background-color: rgb(250, 250, 195);
+}
+
+button.clicked, button:active  {
+    background-color: rgb(250, 227, 193);
+}
+

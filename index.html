@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="css/index.css" />
+    <title>CALC</title>
+  </head>
+  <body>
+    <div class="calc__container">
+      <div class="expr__container">
+        <input type="text" readonly id="calc__expression" value="0"/>
+        <button id="clear_history" class="expr__btn">Clear history</button>
+        <button id="expand" class="expr__btn">Show history</button>
+        <ul class="history"></ul>
+      </div>
+      <input type="text" readonly id="main__input" value="" />
+      <div class="buttons1__container">
+        <button data-op="+" id="+">+</button>
+        <button data-op="-" id="-">-</button>
+        <button data-op="/" id="/">/</button>
+        <button data-op="*" id="*">*</button>
+      </div>
+      <div class="buttons2__container">
+        <button id="delete">backsp</button>
+        <button id="clear">clear</button>
+        <button id="result">=</button>
+        <button id="total">total</button>
+      </div>
+      <div class="numbers__container">
+        <button id=".">.</button>
+        <button id="switch">+/-</button>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
